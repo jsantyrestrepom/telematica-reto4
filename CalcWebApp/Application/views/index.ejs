@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" >
+	<title >RESTO 4 - Web Services</title>
+	<!-- Bootstrap -->
+	<link href="/static/resources/css/bootstrap.min.css" rel="stylesheet" media="screen" >
+</head>
+<body>
+	<header >
+		<h2 class="offset2" >Calculator Based On Web Services</h2>
+	</header>
+	<section >
+		<div class="container" style="height: 500px;"><br />
+			<p >Writes numbers in the inputs and choose the operation and see what happens...</p><br />
+			<form method="GET" action="?" class="form-inline" id="form-calc" >
+				<fieldset class="offset4" >
+					<div class="input-append" >
+					<input class="input-small" id="appendedDropdownButton" name="p1" type="text" />
+					<div class="btn-group" >
+						<button class="btn dropdown-toogle" data-toogle="dropdown" name="op" id="op" ><i class="icon-chevron-down" ></i></button>
+						<ul class="dropdown-menu" >
+							<li class="op" id="op-sumar" >SUMAR</li>
+							<li class="op" id="op-restar" >RESTAR</li>
+							<li class="op" id="op-multiplicar" >MULTIPLICAR</li>
+							<li class="op" id="op-dividir" >DIVIDIR</li>
+						</ul>
+					</div>
+					<input class="input-small" id="appendedDropdownButton" name="p2" type="text" />
+					</div>
+				</fieldset>
+			</form>
+			<br /><br /><hr />
+			<div id="results">
+				<p class="span2 offset2" ><%= data %></p>
+			</div>
+		</div>
+
+	</section>
+	<footer class="footer" style="background-color: rgb(245, 245, 245);" >
+	<div class="container" id="cc_rights" >
+		<p class="span4 offset10" > Develop by: Javier Santiago Restrepo Moncada</p>
+		<p class="span4 offset10" ><time datetime="2013-02-18" ></time><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/us/" ><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
+	</div>
+	</footer>
+	<!-- <script src="http://code.jquery.com/jquery.js" ></script> -->
+	<script src="/static/resources/js/jquery-1.9.1.min.js" ></script>
+	<script src="/static/resources/js/bootstrap.min.js" ></script>
+	<script src="/static/resources/js/core.js" ></script>
+</body>
+</html>
