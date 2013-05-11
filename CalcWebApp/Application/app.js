@@ -8,7 +8,7 @@ server.listen(8080);
 console.log("=> Running . . . .");
 
 
-	/* configuration */
+	/* configurations */
 app.configure(function(){
 	app.set('view engine', 'ejs');		// templates motor
 	app.set('views', __dirname + '/views');

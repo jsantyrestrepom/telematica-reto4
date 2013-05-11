@@ -1,0 +1,8 @@
+{
+	"name" : "calc1API",
+	"description" : "REST API that provide a simple web service",
+	"version" : "0.0.1",
+	"dependencies" : {
+		"restify" : "2.x.x"
+	}
+}

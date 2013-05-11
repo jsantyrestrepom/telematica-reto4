@@ -1,0 +1,5 @@
+<?xml version="1.0" encodig="utf-8"?>
+<urls>
+	<url>http://localhost:8002/ws1calc</url>
+	<url>http://localhost:8004/ws2calc</url>
+</urls>
