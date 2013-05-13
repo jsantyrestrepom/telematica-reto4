@@ -23,6 +23,7 @@ public class ServiceClient {
         if (url.startsWith("error")) {
             return url;
         } else {
+            System.out.println("=> Calling the service . . . .");
             String result;
                 // making the request
             try {
@@ -32,13 +33,12 @@ public class ServiceClient {
                 MultivaluedMap<String, String> params = new MultivaluedMapImpl();
                 params.add("p1", p1);
                 params.add("p2", p2);
-                System.out.println("=> ");
+                System.out.println("> making the request");
                 String response = resource.path("/" + serviceName).
                         queryParams(params).
                         get(String.class);
-                System.out.println(response);
-
-                result = response;
+                System.out.println("> parsing the response");
+                result = response.substring(11, response.length()-2);
             } catch (Exception ex) {
                 result = "error";
             }
