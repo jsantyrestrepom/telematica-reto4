@@ -13,26 +13,36 @@
 	<section >
 		<div class="container" style="height: 500px;"><br />
 			<p >Writes numbers in the inputs and choose the operation and see what happens...</p><br />
-			<form method="GET" action="?" class="form-inline" id="form-calc" >
-				<fieldset class="offset4" >
-					<div class="input-append" >
-					<input class="input-small" id="appendedDropdownButton" name="p1" type="text" />
-					<div class="btn-group" >
-						<button class="btn dropdown-toogle" data-toogle="dropdown" name="op" id="op" ><i class="icon-chevron-down" ></i></button>
-						<ul class="dropdown-menu" >
-							<li class="op" id="op-sumar" >SUMAR</li>
-							<li class="op" id="op-restar" >RESTAR</li>
-							<li class="op" id="op-multiplicar" >MULTIPLICAR</li>
-							<li class="op" id="op-dividir" >DIVIDIR</li>
-						</ul>
-					</div>
-					<input class="input-small" id="prependedDropdownButton" name="p2" type="text" />
-					</div>
+			<form method="GET" action="webservice?" class="form-inline" id="form-calc" >
+				<fieldset class="offset2" >
+					<div class="span2" >
+		                <input class="input-medium" name="p1" type="text" autofocus /><br /><br>
+		                <input class="input-medium" name="p2" type="text" />
+		            </div>
+	            	<div class="span4 offset1" >
+	                    <input class="span2 input-medium" name="op" id="op" type="hidden" />
+	                    <div class="row-fluid">
+	                        <div class="span2" >
+	                        	<button class="btn btn-large btn-primary operation" id="sumar" > + </button>
+	                        </div>
+	                        <div class="span2" >
+	                        	<button class="btn btn-large btn-primary operation" id="restar" > - </button>
+	                        </div>
+	                    </div>
+	                    <div class="row-fluid">
+	                        <div class="span2" >
+	                        	<button class="btn btn-large btn-primary operation" id="multiplicar" > * </button>
+	                        </div>
+	                        <div class="span2" >
+	                        	<button class="btn btn-large btn-primary operation" id="dividir" > / </button>
+	                        </div>
+	                    </div>
+	            	</div>
 				</fieldset>
 			</form>
 			<br /><br /><hr />
 			<div id="results">
-				<p class="span2 offset2" ><%= result %></p>
+				<p class="span2 offset2" ><h2> <%= results %> </h2></p>
 			</div>
 		</div>
 
