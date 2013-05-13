@@ -7,7 +7,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -28,7 +27,7 @@ public class CalcProxy {
             doc.getDocumentElement().normalize();
             
             System.out.println("=> Searching in calcserver.xml . . . .");
-            System.out.println("> root of xml file " + doc.getDocumentElement().getNodeName());
+            System.out.println("> root of xml file: " + doc.getDocumentElement().getNodeName());
             
             NodeList urls = doc.getElementsByTagName("url");
             Node url;
@@ -43,7 +42,7 @@ public class CalcProxy {
                 System.out.println("> name: " + url.getNodeName() + " - value: " + urlService);
             } else {
                 urlService = "error: Could not find the service";
-                System.out.println("> could not find the service");
+//                System.out.println("> could not find the service");
             }
             return urlService;
         } catch (IOException ex) {
